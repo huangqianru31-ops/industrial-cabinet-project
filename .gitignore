@@ -1,0 +1,25 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Large data / generated outputs
+data/
+datasets/
+outputs/
+artifacts/
+*.zip
+*.tar
+*.tar.gz
+
+# Logs
+*.log
+

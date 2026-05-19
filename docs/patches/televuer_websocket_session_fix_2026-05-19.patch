@@ -1,0 +1,37 @@
+diff --git a/src/televuer/televuer.py b/src/televuer/televuer.py
+index 9a5bde2..02cb3ab 100644
+--- a/src/televuer/televuer.py
++++ b/src/televuer/televuer.py
+@@ -467,17 +467,23 @@ class TeleVuer:
+             )
+ 
+         while True:
+-            session.upsert(
+-                WebRTCVideoPlane(
+-                    src=self.webrtc_url,
+-                    iceServer=None,
+-                    iceServers=[],
+-                    key="video-quad",
+-                    aspect=self.aspect_ratio,
+-                    height = 7,
+-                ),
+-                to="bgChildren",
+-            )
++            try:
++                session.upsert(
++                    WebRTCVideoPlane(
++                        src=self.webrtc_url,
++                        iceServer=None,
++                        iceServers=[],
++                        key="video-quad",
++                        aspect=self.aspect_ratio,
++                        height = 7,
++                    ),
++                    to="bgChildren",
++                )
++            except AssertionError as e:
++                if "Websocket session is missing" in str(e):
++                    print("[televuer] websocket session closed, stopping monocular webrtc loop")
++                    break
++                raise
+             await asyncio.sleep(1.0 / self.display_fps)

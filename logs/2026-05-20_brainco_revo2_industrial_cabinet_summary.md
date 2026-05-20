@@ -95,6 +95,40 @@ GitHub 查看：
 https://github.com/huangqianru31-ops/unitree_sim_isaaclab/tree/feat/revo2-integration
 ```
 
+### `unitree_lerobot`
+
+分支：
+
+```text
+feat/sim-robot-configs
+```
+
+最新提交：
+
+```text
+e280670 Add sim robot configs for lerobot conversion
+```
+
+主要改动：
+
+- `unitree_lerobot/utils/constants.py`
+  - 新增 `Unitree_G1_Dex3_Sim`、`Unitree_G1_Inspire_Sim`、`Unitree_G1_Brainco_Sim`。
+  - 补充仿真数据的三相机配置：
+    - `color_0 -> cam_high`
+    - `color_1 -> cam_left_wrist`
+    - `color_2 -> cam_right_wrist`
+  - 解决仿真采集数据转 LeRobot 时相机数量和相机 key 对不上的问题。
+- `LOCAL_CHANGES.md`
+  - 记录本地 LeRobot 转换配置改动。
+
+GitHub 查看：
+
+```text
+https://github.com/huangqianru31-ops/unitree_lerobot/tree/feat/sim-robot-configs
+```
+
+这部分是数据转换配置，不属于给师姐看的 G1/Revo2/工业柜模型文件包。
+
 ## 数据和导出
 
 最新有效录制：

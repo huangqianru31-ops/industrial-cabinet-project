@@ -38,7 +38,7 @@
 
 ## 最新入口
 
-2026-05-20 的 BrainCo/Revo2 工业柜调参主要分布在两个代码仓：
+2026-05-20 的 BrainCo/Revo2 工业柜调参和数据转换支持主要分布在三个代码仓：
 
 - `xr_teleoperate`
   - GitHub: `https://github.com/huangqianru31-ops/xr_teleoperate/tree/feat/teleop-data-tools`
@@ -46,6 +46,10 @@
 - `unitree_sim_isaaclab`
   - GitHub: `https://github.com/huangqianru31-ops/unitree_sim_isaaclab/tree/feat/revo2-integration`
   - 最新提交：`6fe6653 Tune BrainCo Revo2 cabinet simulation`
+- `unitree_lerobot`
+  - GitHub: `https://github.com/huangqianru31-ops/unitree_lerobot/tree/feat/sim-robot-configs`
+  - 最新提交：`e280670 Add sim robot configs for lerobot conversion`
+  - 用途：补充仿真数据转换时的机器人类型和三相机映射。
 
 给师姐看的模型与调参文件包在服务器本地：
 

@@ -65,6 +65,9 @@ git diff
   - `Unitree_G1_Dex3_Sim`
   - `Unitree_G1_Inspire_Sim`
   - `Unitree_G1_Brainco_Sim`
+  - 三相机映射：`color_0 -> cam_high`，`color_1 -> cam_left_wrist`，`color_2 -> cam_right_wrist`
+  - 用于把仿真采集的三路图像 episode 转成 LeRobot 数据集
+  - 最新提交：`e280670 Add sim robot configs for lerobot conversion`
 
 最常用命令：
 
@@ -115,3 +118,9 @@ GitHub 上不要只看默认 `main` 分支，要切到对应 feature 分支：
     - `action_provider/action_provider_dds.py`
     - `robots/revo2.py`
     - `tasks/common_scene/base_scene_industrial_cabinet_simple.py`
+- `unitree_lerobot`
+  - `https://github.com/huangqianru31-ops/unitree_lerobot/tree/feat/sim-robot-configs`
+  - 重点看：
+    - `unitree_lerobot/utils/constants.py`
+    - `LOCAL_CHANGES.md`
+  - 这部分不用放进给师姐的模型包，主要是 LeRobot 转换配置。
